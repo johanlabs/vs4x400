@@ -1,0 +1,10 @@
+{
+  "name": "vector-k",
+  "version": "0.2.0",
+  "description": "Vector-K: Dual-Core AXI Engine",
+  "scripts": {
+    "test:hw": "iverilog -o sim/vector_k_sim rtl/vector_k_core.v rtl/vector_k_axi.v sim/vector_k_tb.v && vvp sim/vector_k_sim",
+    "benchmark": "python3 scripts/benchmark.py"
+  },
+  "license": "ISC"
+}
