@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module vector_k_bench_tb;
+module vs4x400_bench_tb;
     reg clk, reset, start_search;
     wire busy;
     wire [15:0] mem_addr;
@@ -8,7 +8,7 @@ module vector_k_bench_tb;
     reg [31:0] sram [0:65535]; // 64K words
     integer start_cycle, end_cycle;
 
-    vector_k_dual_core uut (
+    vs4x400_dual_core uut (
         .clk(clk), .reset(reset), .clear(1'b0),
         .start_search(start_search), 
         .vector_count(10'd1024), .dim_size(8'd128),
@@ -30,9 +30,9 @@ module vector_k_bench_tb;
         end_cycle = $time;
 
         $display("--- HARDWARE BENCHMARK RESULT ---");
-        $display("Tempo total: %0d ns", end_cycle - start_cycle);
-        $display("Ciclos: %0d", (end_cycle - start_cycle) / 10);
-        $display("Vencedor ID: %d | Score: %d", winner_id, $signed(max_score));
+        $display("Total time: %0d ns", end_cycle - start_cycle);
+        $display("Cycles: %0d", (end_cycle - start_cycle) / 10);
+        $display("Winner: %d | Score: %d", winner_id, $signed(max_score));
         $finish;
     end
 endmodule

@@ -1,4 +1,4 @@
-module vector_k_core (
+module vs4x400_core (
     input clk, input reset,
     input start_search,
     input [9:0] vector_count, 

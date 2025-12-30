@@ -1,4 +1,4 @@
-#include "vector_k.h"
+#include "vs4x400.h"
 #include <stdio.h>
 
 void update_database_octa(uint32_t addr, uint32_t part_lo, uint32_t part_hi) {
@@ -10,7 +10,7 @@ void update_database_octa(uint32_t addr, uint32_t part_lo, uint32_t part_hi) {
 }
 
 int main() {
-    printf("Vector-K v0.3.0: Octa-Core Online\n");
+    printf("VS4x400: Online\n");
 
     update_database_octa(0, 0x04030201, 0x08070605);
 

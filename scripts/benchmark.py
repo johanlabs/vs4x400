@@ -36,7 +36,7 @@ def estimate_hardware(num_vectors, dim, cores=8):
     return {"cycles": int(total_cycles), "time_ms": time_ms}
 
 def run():
-    print("\n=== VECTOR-K v0.4.0: ZERO-OVERHEAD BENCHMARK ===\n")
+    print("\n=== VS4x400 Zero-Overhead Benchmark ===\n")
     for num_vectors, dim in CONFIGS:
         sw = benchmark_software(num_vectors, dim)
         hw = estimate_hardware(num_vectors, dim)

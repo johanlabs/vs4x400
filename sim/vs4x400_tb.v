@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module vector_k_tb;
+module vs4x400_tb;
     reg clk, reset, clear, start_search;
     wire busy;
     wire [11:0] mem_addr;
@@ -9,7 +9,7 @@ module vector_k_tb;
     // Memória Interna maior para suportar os testes
     reg [31:0] sram [0:1023];
 
-    vector_k_dual_core uut (
+    vs4x400_dual_core uut (
         .clk(clk), .reset(reset), .clear(clear), 
         .start_search(start_search), .vector_count(10'd3), .dim_size(8'd8),
         .mem_addr(mem_addr), .mem_data(sram[mem_addr]),

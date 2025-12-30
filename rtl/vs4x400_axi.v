@@ -1,4 +1,4 @@
-module vector_k_axi (
+module vs4x400_axi (
     input s_axi_aclk, input s_axi_aresetn,
     input [31:0] s_axi_awaddr, input s_axi_awvalid, output s_axi_awready,
     input [31:0] s_axi_wdata, input s_axi_wvalid, output s_axi_wready,
@@ -26,7 +26,7 @@ module vector_k_axi (
             case (s_axi_awaddr[7:0])
                 8'h00: begin 
                     start_search <= s_axi_wdata[0];
-                    write_en <= s_axi_wdata[1]; // V_CTRL_COMMIT
+                    write_en <= s_axi_wdata[1];
                 end
                 8'h10: data_lo_buffer <= s_axi_wdata; 
                 8'h14: write_data_64 <= {s_axi_wdata, data_lo_buffer}

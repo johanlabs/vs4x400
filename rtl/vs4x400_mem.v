@@ -1,4 +1,4 @@
-module vector_k_mem (
+module vs4x400_mem (
     input clk,
     input we,                  
     input [9:0] addr,          

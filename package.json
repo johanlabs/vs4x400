@@ -1,9 +1,9 @@
 {
-  "name": "vector-k",
+  "name": "vs4x400",
   "version": "0.2.0",
-  "description": "Vector-K: Dual-Core AXI Engine",
+  "description": "Is a high-performance, hardware accelerator for vector similarity search, designed for the next generation of On-Device AI.",
   "scripts": {
-    "test:hw": "iverilog -o sim/vector_k_sim rtl/vector_k_core.v rtl/vector_k_axi.v sim/vector_k_tb.v && vvp sim/vector_k_sim",
+    "test:hw": "iverilog -o sim/vs4x400_sim rtl/vs4x400_core.v rtl/vs4x400_axi.v sim/vs4x400_tb.v && vvp sim/vs4x400_sim",
     "benchmark": "python3 scripts/benchmark.py"
   },
   "license": "ISC"

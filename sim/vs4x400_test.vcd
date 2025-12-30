@@ -7,7 +7,7 @@ $end
 $timescale
 	1ps
 $end
-$scope module vector_k_tb $end
+$scope module vs4x400_tb $end
 $var wire 8 ! winner_id [7:0] $end
 $var wire 32 " max_score [31:0] $end
 $var wire 32 # final_acc [31:0] $end
